@@ -653,6 +653,15 @@ p_052() =
   x
 }
 
+\\ Problem 53: Combinatoric Selections
+p_053() = {
+  c = 0;
+  for(n = 23, 100,
+    for(r = 2, n,
+      if(binomial(n, r) > 1000000, c += 1)));
+  c
+}
+
 \\ Problem 67: Maximum Path Sum II
 p_067() =
 {
