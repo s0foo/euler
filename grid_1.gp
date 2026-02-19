@@ -635,6 +635,24 @@ p_056() =
   m
 }
 
+\\ Problem 52: Permuted Multiples
+p_052() =
+{
+  x = 0; l = 6;
+  while(x == 0,
+    f = 10^(l - 1);
+    c = (10^l)/6;
+    for(i = f, c,
+      a = Set(digits(2*i));
+      b = Set(digits(3*i));
+      c = Set(digits(4*i));
+      d = Set(digits(5*i));
+      e = Set(digits(6*i));
+      if(a == b && b == c && c == d && d == e, x = i; break));
+    l++);
+  x
+}
+
 \\ Problem 67: Maximum Path Sum II
 p_067() =
 {
