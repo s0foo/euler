@@ -670,3 +670,8 @@ p_067() =
     for(j = 1, 100-i, t[i+1][j] += max(t[i][j],t[i][j+1])));
   t[100]
 }
+
+\\ Problem 97: Large Non-Mersenne Prime
+p_097() = {
+  lift(Mod(28433 * 2^7830457 + 1, 10000000000))
+}
