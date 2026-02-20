@@ -662,6 +662,17 @@ p_053() = {
   c
 }
 
+\\ Problem 56: Powerful Digit Sum
+p_056() =
+{
+  m = 0;
+  for(a = 1, 99,
+    for(b = 1, 99,
+      c = sumdigits(a^b);
+      if(c > m, m = c)));
+  m
+}
+
 \\ Problem 67: Maximum Path Sum II
 p_067() =
 {
