@@ -546,6 +546,26 @@ p_043() =
   s
 }
 
+\\ Problem 44: Pentagon Numbers
+p_044() =
+{
+  my(j = 1, k = 2, Pj, Pk, sum, diff, found = 0, minDiff = 0);
+
+  while(!found,
+    Pj = j * (3 * j - 1) / 2;
+    Pk = k * (3 * k - 1) / 2;
+    sum = Pj + Pk;
+    diff = Pk - Pj;
+
+    if(u_ispentagonal(sum) && u_ispentagonal(diff), found = 1; minDiff = diff);
+
+    if(!found,
+      k++;
+      if(k - j > 10000, j++; k = j + 1)));
+
+    return(minDiff);
+}
+
 \\ Problem 45: Triangular, Pentagonal, and Hexagonal
 p_045() =
 {
